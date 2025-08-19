@@ -1,10 +1,22 @@
 .app-container {
   min-height: 100vh;
   width: 100%;
-  background-color: #f9fafb;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+
+  /* mao ni siya ang  */
+  background: radial-gradient(circle at top center,
+      #1e3a5f 0%,
+      /* mu glow sa top */
+      #0b1d33 40%,
+      /* dark navy sa tunga */
+      #00010d 100%
+      /* dapat black ang bottom */
+    );
+
+  /* white for contrast */
+  color: white;
 }
