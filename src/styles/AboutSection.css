@@ -1,0 +1,91 @@
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background-color: #000218;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.section-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #3b82f6;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    gap: 48px;
+}
+
+.about-image-container {
+    text-align: center;
+}
+
+.about-image {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 448px;
+    margin: 0 auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.about-text {
+    color: #d1d5db;
+    margin-bottom: 24px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.skill-card {
+    padding: 16px;
+    background-color: #000b29;
+    border-radius: 8px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.skill-icon {
+    color: #60a5fa;
+    margin-bottom: 8px;
+}
+
+.skill-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.skill-description {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

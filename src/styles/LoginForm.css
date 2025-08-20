@@ -211,3 +211,20 @@
 .signup-link:hover {
   color: #3b82f6;
 }
+
+/* Wrapper that centers the whole login form */
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* horizontal center */
+  align-items: center;
+  /* vertical center */
+
+  /* keep your dark gradient background */
+  background: radial-gradient(circle at top center,
+      #1e3a5f 0%,
+      #0b1d33 40%,
+      #00010d 100%);
+}
