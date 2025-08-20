@@ -19,7 +19,6 @@ export function LoginForm() {
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<LoginErrors>({});
-
   const navigate = useNavigate();
 
   // Check if there's a remembered email on component mount
@@ -33,7 +32,6 @@ export function LoginForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     let newErrors: LoginErrors = {};
 
     // Validate email

@@ -1,13 +1,18 @@
 .home-container {
+    min-height: 100vh;
 
     background: radial-gradient(circle at top center,
             #1e3a5f 0%,
-            /* mu glow sa top */
             #0b1d33 40%,
-            /* dark navy sa tunga */
-            #00010d 100%
-            /* dapat black ang bottom */
-        );
-
+            #00010d 100%);
     color: white;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
