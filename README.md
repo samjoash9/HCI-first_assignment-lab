@@ -2,5 +2,7 @@
 2. Run `npm run dev`
 
 CREDENTIALS:
-test123@gmail.com
-password123
+
+email: test123@gmail.com
+
+password: password123
