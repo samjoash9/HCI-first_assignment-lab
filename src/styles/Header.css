@@ -8,27 +8,17 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px;
-} */
-
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px;
+    padding: 20px 50px;
     max-width: 100%;
-    /* ⬅️ prevents it from overflowing */
     overflow-x: hidden;
-    /* optional safeguard */
 }
 
-
 .logo {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: -0.025em;
 }
@@ -43,14 +33,14 @@
 
 .nav-link {
     color: #d1d5db;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     transition: color 0.2s;
     margin-left: 32px;
 }
 
 .nav-link:hover {
-    color: #ffffff;
+    color: #1d4ed8;
 }
 
 .mobile-menu-button {
@@ -95,4 +85,27 @@
     .mobile-menu-button {
         display: none;
     }
+}
+
+/* Style the logout button to look like other nav links */
+.nav-link.logout-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+}
+
+.mobile-nav-link.logout-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
 }

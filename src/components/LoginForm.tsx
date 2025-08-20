@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { EyeIcon, EyeOffIcon, LoaderCircleIcon } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
-import '../styles/LoginForm.css';
+import '../styles/AuthPages.css';
 
 interface LoginErrors {
   email?: string;
@@ -11,7 +11,7 @@ interface LoginErrors {
 
 export function LoginForm() {
   const TRUE_EMAIL = "samjoashantonio@gmail.com";
-  const TRUE_PASSWORD = "22101163@joash";
+  const TRUE_PASSWORD = "password123";
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,6 +21,15 @@ export function LoginForm() {
   const [errors, setErrors] = useState<LoginErrors>({});
 
   const navigate = useNavigate();
+
+  // Check if there's a remembered email on component mount
+  useEffect(() => {
+    const rememberedEmail = localStorage.getItem('rememberedEmail');
+    if (rememberedEmail) {
+      setEmail(rememberedEmail);
+      setRememberMe(true);
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -59,9 +68,13 @@ export function LoginForm() {
     setTimeout(() => {
       setIsLoading(false);
 
+      // Handle remember me functionality
       if (rememberMe) {
-        localStorage.setItem('rememberMe', 'true');
+        localStorage.setItem('rememberedEmail', email);
+      } else {
+        localStorage.removeItem('rememberedEmail');
       }
+
       localStorage.setItem('isAuthenticated', 'true');
 
       navigate('/home');
@@ -69,7 +82,7 @@ export function LoginForm() {
   };
 
   return (
-    <div className="login-page">
+    <div className="auth-page">
       <div className="login-form-container">
         <div className="login-header">
           <h1 className="login-title">Welcome back</h1>
@@ -147,7 +160,7 @@ export function LoginForm() {
               className="checkbox"
             />
             <label htmlFor="remember-me" className="checkbox-label">
-              Remember me for 30 days
+              Remember me
             </label>
           </div>
 
@@ -168,7 +181,7 @@ export function LoginForm() {
 
         {/* SIGNUP LINK */}
         <p className="signup-text">
-          Don’t have an account?{' '}
+          Don't have an account?{' '}
           <Link to="/signup" className="signup-link">Sign up</Link>
         </p>
       </div>
