@@ -1,5 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
+
+// reuse lang sa css
 import "../styles/AuthPages.css";
 
 export function ForgotPassword() {
@@ -7,7 +8,9 @@ export function ForgotPassword() {
         <div className="auth-page">
             <div className="auth-container">
                 <h1>Forgot Password Page</h1>
-                <Link to="/" className="back-button">⬅ Back to Login</Link>
+                <Link to="/login" className="back-button">
+                    Back to Login
+                </Link>
             </div>
         </div>
     );
