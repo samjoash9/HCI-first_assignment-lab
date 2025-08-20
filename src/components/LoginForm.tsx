@@ -12,7 +12,7 @@ interface LoginErrors {
 
 export function LoginForm() {
   // hardcoded credentials : for demo purposes
-  const TRUE_EMAIL = "samjoashantonio@gmail.com";
+  const TRUE_EMAIL = "test123@gmail.com";
   const TRUE_PASSWORD = "password123";
 
   // states for form inputs and behaviors
